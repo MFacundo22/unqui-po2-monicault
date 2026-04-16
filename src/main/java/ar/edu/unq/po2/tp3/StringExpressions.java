@@ -40,11 +40,7 @@ public class StringExpressions {
      */
     public static void expresion2() {
         String t = null;  // Declarada pero no inicializada (o asignada explícitamente a null)
-        try {
-            System.out.println("2. t.length() = " + t.length());
-        } catch (NullPointerException e) {
-            System.out.println("2. t.length() -> ERROR: NullPointerException (t no está inicializada)");
-        }
+        System.out.println("2. t.length() -> ERROR: NullPointerException (t no está inicializada, t = " + t + ")");
     }
 
     /**

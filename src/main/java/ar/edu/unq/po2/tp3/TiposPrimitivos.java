@@ -128,12 +128,17 @@ public class TiposPrimitivos {
         System.out.println("Unboxing - Integer a int:  " + primitivoExtraido);
         
         // Cuidado: Unboxing de null causa NullPointerException
-        Integer objetoNull = null;
+        Integer objetoNull = obtenerIntegerNulo();
         try {
             int resultado = objetoNull;  // Intentará hacer unboxing
+            System.out.println("Unboxing de Integer null: " + resultado);
         } catch (NullPointerException e) {
             System.out.println("ERROR: No se puede hacer unboxing de null -> NullPointerException");
         }
+    }
+
+    private Integer obtenerIntegerNulo() {
+        return null;
     }
     
     /**
@@ -144,7 +149,7 @@ public class TiposPrimitivos {
         
         Integer a = 128;
         Integer b = 128;
-        Integer c = new Integer(128);
+        Integer c = Integer.valueOf(128);
         
         System.out.println("a = 128 (autoboxing)");
         System.out.println("b = 128 (autoboxing)");
